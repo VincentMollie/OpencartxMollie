@@ -2,7 +2,7 @@
 
 echo "[!] Waiting for mariadb to start!"
 
-sleep 15
+sleep 7
 
 echo "[!] Doing stuff!"
 

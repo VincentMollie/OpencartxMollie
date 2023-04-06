@@ -20,6 +20,7 @@ services:
     volumes:
       - 'opencart_data:/bitnami/opencart'
       - 'opencart_storage_data:/bitnami/opencart_storage/'
+       - "./.docker/shell.sh:/shell.sh"
     depends_on:
       - mariadb
 

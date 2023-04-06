@@ -1,8 +1,8 @@
-version: '1'
+version: '3'
 
 services:
   opencart:
-    build: .docker/.
+    build: ./.docker
     ports:
       - '80:8080'
       - '443:8443'
@@ -18,9 +18,9 @@ services:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:
-      - 'opencart_data:/bitnami/opencart'
-      - 'opencart_storage_data:/bitnami/opencart_storage/'
-       - "./.docker/shell.sh:/shell.sh"
+      #- 'opencart_data:/bitnami/opencart'
+      #- 'opencart_storage_data:/bitnami/opencart_storage/'
+      - "./.docker/shell.sh:/shell.sh"
     depends_on:
       - mariadb
 
